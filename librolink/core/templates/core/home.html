@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibroLink</title>
+
+    <!-- Enlaces a estilos CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/home_styles.css' %}">
+    <!-- Enlaces a fuentes y otros recursos -->
+
+</head>
+
+<body>
+    <!-- Header con enlaces a las aplicaciones -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>LibroLink</h1>
+                </div>
+                <nav class="app-links">
+                    <ul>
+                        <li><a href="#">Búsqueda de Libros</a></li>
+                        <li><a href="#">Administración de Libros</a></li>
+                        <!-- Agrega aquí más enlaces según las aplicaciones necesarias -->
+                    </ul>
+                </nav>
+                <div class="user-info">
+                    {% if user.is_authenticated %}
+                        <span>Bienvenido, {{ user.username }}</span>
+                        <a href="{% url 'logout' %}">Salir</a>
+                    {% else %}
+                        <a href="{% url 'login' %}">Iniciar sesión</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        {% block content %}
+        <!-- Aquí se incluirá el contenido específico de cada aplicación -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer (por definir) -->
+
+    <!-- Scripts y otros recursos -->
+</body>
+
+</html>
