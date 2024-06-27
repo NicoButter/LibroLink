@@ -1,5 +1,6 @@
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
 
-class LoginForm(forms.Form):
-    username = forms.CharField(label='Usuario')
-    password = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
+class CustomAuthenticationForm(AuthenticationForm):
+    # Puedes personalizar el formulario aquí si es necesario
+    pass
