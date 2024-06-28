@@ -17,7 +17,7 @@ LibroLink es un sistema de gestión de bibliotecas desarrollado con Django. Perm
 - **JavaScript**: Utilizado para funcionalidades dinámicas como la actualización de la fecha y hora en tiempo real.
 
 
-##Contacto
+## Contacto
 
 Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo:
 
