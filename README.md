@@ -15,7 +15,7 @@ LibroLink es un sistema de gestión de bibliotecas desarrollado con Django. Perm
 - **HTML5**: Estructura básica de las páginas web.
 - **CSS3**: Estilos para el diseño y la disposición de los elementos en la interfaz.
 - **JavaScript**: Utilizado para funcionalidades dinámicas como la actualización de la fecha y hora en tiempo real.
-- **Postgre
+- Postgre
 
 
 ## Contacto
