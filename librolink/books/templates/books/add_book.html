@@ -1,0 +1,16 @@
+{% extends "core/home.html" %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'books/css/add_books_styles.css' %}">
+
+<div class="form-container">
+    <h2>Añadir Libro</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+{% endblock %}

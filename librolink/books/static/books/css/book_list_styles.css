@@ -1,0 +1,73 @@
+.search-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.search-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.book-list {
+    margin-top: 40px;
+}
+
+.book-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-list li {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.book-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-list h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.book-list p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}

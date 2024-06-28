@@ -24,8 +24,8 @@
                 </div>
                 <nav class="app-links">
                     <ul>
-                        <li><a href="#">Búsqueda de Libros</a></li>
-                        <li><a href="#">Administración de Libros</a></li>
+                        <li><a href="{% url 'book_list' %}">Búsqueda de Libros</a></li>
+                        <li><a href="{% url 'add_book' %}">Administración de Libros</a></li>
                         <!-- Agrega aquí más enlaces según las aplicaciones necesarias -->
                     </ul>
                 </nav>
@@ -48,9 +48,32 @@
         {% endblock %}
     </main>
 
-    <!-- Footer (por definir) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p id="datetime"></p>
+                </div>
+                <div class="footer-center">
+                    <p>Powered by Nicolas</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Scripts y otros recursos -->
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var datetime = now.toLocaleString();
+            document.getElementById('datetime').textContent = datetime;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();  // Call once immediately to set the initial value
+    </script>
+
 </body>
 
 </html>

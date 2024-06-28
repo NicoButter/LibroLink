@@ -24,5 +24,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),  # Incluimos las URLs de la app accounts
     path('', lambda request: redirect('login')),  # Redirige la raíz al login
     path('core/', include('core.urls')),  # URL para la aplicación core
-
+    path('books/', include('books.urls'))
 ]
