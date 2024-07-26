@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'librolink_db',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres010203',
+        'USER': 'librolink',
+        'PASSWORD': 'librolink010203',
         'HOST': 'localhost',  
         'PORT': '5432', 
     }
