@@ -8,27 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LibroLink</title>
 
-    <!-- Enlaces a estilos CSS -->
     <link rel="stylesheet" href="{% static 'core/css/home_styles.css' %}">
-    <!-- Enlaces a fuentes y otros recursos -->
-
 </head>
 
 <body>
-    <!-- Header con enlaces a las aplicaciones -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
+    <header class="core_header">
+        <div class="core_container">
+            <div class="core_header_content">
+                <div class="core_logo">
                     <h1>LibroLink</h1>
                 </div>
-                <nav class="app-links">
+                <nav class="core_app_links">
                     <ul>
                         <li><a href="{% url 'book_list' %}">Búsqueda de Libros</a></li>
                         <li><a href="{% url 'add_book' %}">Administración de Libros</a></li>
                     </ul>
                 </nav>
-                <div class="user-info">
+                <div class="core_user_info">
                     {% if user.is_authenticated %}
                         <span>Bienvenido, {{ user.username }}</span>
                         <a href="{% url 'logout' %}">Salir</a>
@@ -40,21 +36,21 @@
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="core_main_content">
         {% block content %}
         {% endblock %}
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
+    <footer class="core_footer">
+        <div class="core_footer_container">
+            <div class="core_footer_content">
+                <div class="core_footer_left">
                     <p id="datetime"></p>
                 </div>
-                <div class="footer-center">
+                <div class="core_footer_center">
                     <p>Powered by Nicolas</p>
                 </div>
-                <div class="footer-right">
+                <div class="core_footer_right">
                     <a href="#">Contacto</a>
                 </div>
             </div>
