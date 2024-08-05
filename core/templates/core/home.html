@@ -26,7 +26,6 @@
                     <ul>
                         <li><a href="{% url 'book_list' %}">Búsqueda de Libros</a></li>
                         <li><a href="{% url 'add_book' %}">Administración de Libros</a></li>
-                        <!-- Agrega aquí más enlaces según las aplicaciones necesarias -->
                     </ul>
                 </nav>
                 <div class="user-info">
@@ -41,10 +40,8 @@
         </div>
     </header>
 
-    <!-- Contenido principal -->
     <main class="main-content">
         {% block content %}
-        <!-- Aquí se incluirá el contenido específico de cada aplicación -->
         {% endblock %}
     </main>
 
@@ -71,7 +68,7 @@
             document.getElementById('datetime').textContent = datetime;
         }
         setInterval(updateDateTime, 1000);
-        updateDateTime();  // Call once immediately to set the initial value
+        updateDateTime();
     </script>
 
 </body>
