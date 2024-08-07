@@ -1,0 +1,21 @@
+{% extends 'core/home.html' %}
+
+{% block title %}Dashboard Socio{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido al Dashboard del Socio</h1>
+    <div class="dashboard-content">
+        <section>
+            <h2>Buscar Libros</h2>
+            <a href="{% url 'buscar_libros' %}">Buscar Libros</a>
+        </section>
+        <section>
+            <h2>Mis Préstamos</h2>
+            <a href="{% url 'mis_prestamos' %}">Consultar Mis Préstamos</a>
+        </section>
+        <section>
+            <h2>Reservas</h2>
+            <a href="{% url 'reservar_libros' %}">Realizar Reservas</a>
+        </section>
+    </div>
+{% endblock %}

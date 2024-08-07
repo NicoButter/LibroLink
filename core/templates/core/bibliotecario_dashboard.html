@@ -1,0 +1,21 @@
+{% extends 'core/home.html' %}
+
+{% block title %}Dashboard Bibliotecario{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido al Dashboard del Bibliotecario</h1>
+    <div class="dashboard-content">
+        <section>
+            <h2>Gestión de Libros</h2>
+            <a href="{% url 'gestionar_libros' %}">Administrar Libros</a>
+        </section>
+        <section>
+            <h2>Gestión de Socios</h2>
+            <a href="{% url 'gestionar_socios' %}">Administrar Socios</a>
+        </section>
+        <section>
+            <h2>Préstamos</h2>
+            <a href="{% url 'gestionar_prestamos' %}">Administrar Préstamos</a>
+        </section>
+    </div>
+{% endblock %}

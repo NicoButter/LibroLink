@@ -1,0 +1,30 @@
+{% extends 'core/home.html' %}
+
+{% block title %}Dashboard Admin{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido al Dashboard del Administrador</h1>
+    <div class="dashboard-content">
+        <section>
+            <h2>Gestión de Usuarios</h2>
+            <a href="{% url 'gestionar_usuarios' %}">Administrar Usuarios</a>
+        </section>
+        <section>
+            <h2>Gestión de Libros</h2>
+            <a href="{% url 'book_list' %}">Ver Lista de Libros</a>
+            <a href="{% url 'add_book' %}">Añadir Nuevo Libro</a>
+        </section>
+        <section>
+            <h2>Gestión de Socios</h2>
+            <a href="{% url 'gestionar_socios' %}">Administrar Socios</a>
+        </section>
+        <section>
+            <h2>Gestión de Préstamos</h2>
+            <a href="{% url 'gestionar_prestamos' %}">Administrar Préstamos</a>
+        </section>
+        <section>
+            <h2>Configuraciones del Sistema</h2>
+            <a href="{% url 'configuraciones' %}">Ajustes del Sistema</a>
+        </section>
+    </div>
+{% endblock %}

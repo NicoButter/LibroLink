@@ -4,24 +4,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-
+    <title>LibroLink</title>
     <link rel="stylesheet" href="{% static 'accounts/css/login_styles.css' %}">
-
 </head>
 <body>
-    <body>
-        <div class="login-container">
+    <div class="header">
+        <img src="{% static 'accounts/images/librolink_logo_2.png' %}" alt="Logo">
+        <button id="loginBtn">Login</button>
+    </div>
+    <div class="container">
+        <div class="news-container">
+            <div class="news-card">
+                <h3>Nuevas adquisiciones!</h3>
+                <p>Vení a leer estos títulos!</p>
+            </div>
+            <div class="news-card">
+                <h3>Cursos de Java en el SUM! Vení!</h3>
+                <p>Vení a capacitarse con el nuevo plan de capacitación de la Legislatura Provincial!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
             <h2>Login</h2>
-            <form method="post">
+            <form method="post" novalidate>
                 {% csrf_token %}
-                <label for="id_username">Username:</label>
-                <input type="text" id="id_username" name="username" required autofocus>
-                <label for="id_password">Password:</label>
-                <input type="password" id="id_password" name="password" required>
+                {{ form.username.label_tag }}{{ form.username }}
+                {{ form.password.label_tag }}{{ form.password }}
                 <button type="submit">Login</button>
             </form>
         </div>
-    </body>
+    </div>
+
+    <script>
+        var modal = document.getElementById("loginModal");
+        var btn = document.getElementById("loginBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
+
