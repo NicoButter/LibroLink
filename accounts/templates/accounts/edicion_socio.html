@@ -1,0 +1,21 @@
+{% extends 'core/home.html' %}
+
+{% block title %}Edición de Socio{% endblock %}
+
+{% block section_name %}Edición de Socio{% endblock %}
+
+{% block content %}
+    <h1>Edición de Socio</h1>
+    
+    <div class="form-container">
+        <h2>Actualizar Información del Socio</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Actualizar</button>
+        </form>
+    </div>
+    <!-- Botón para Volver al Dashboard -->
+    <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
+
+{% endblock %}

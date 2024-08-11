@@ -1,0 +1,24 @@
+{% extends "core/home.html" %}
+
+{% load static %}
+
+{% block section_name %}Gestión de Libros{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'books/css/book_management_styles.css' %}">
+
+<div class="book-management">
+    <h1>Gestión de Libros</h1>
+
+    <!-- Botones de Gestión -->
+    <div class="management-buttons">
+        <a href="{% url 'books:add_book' %}" class="management-btn">Añadir Libro</a>
+        <a href="{% url 'books:book_list' %}" class="management-btn">Buscar Libros</a>
+    </div>
+
+    <!-- Botón para Volver al Dashboard -->
+    <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
+
+    
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'core/home.html' %}
+
+{% block title %}Eliminar Socio{% endblock %}
+
+{% block section_name %}Eliminar Socio{% endblock %}
+
+{% block content %}
+    <h1>Eliminar Socio</h1>
+    
+    <div class="form-container">
+        <h2>¿Estás seguro de que quieres eliminar a {{ socio.username }}?</h2>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Eliminar</button>
+            <a href="{% url 'accounts:gestionar_socios' %}">Cancelar</a>
+        </form>
+    </div>
+    <!-- Botón para Volver al Dashboard -->
+    <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
+
+{% endblock %}

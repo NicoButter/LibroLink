@@ -22,7 +22,8 @@ from django.shortcuts import redirect
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),  # Incluimos las URLs de la app accounts
-    path('', lambda request: redirect('login')),  # Redirige la raíz al login
     path('core/', include('core.urls')),  # URL para la aplicación core
-    path('books/', include('books.urls'))
+    path('books/', include('books.urls')),
+    path('', include('accounts.urls')),
+    # path('', lambda request: redirect('login')),  # Redirige la raíz al login
 ]

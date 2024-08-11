@@ -1,0 +1,91 @@
+/* Estilos generales para la tabla de socios */
+.socios-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.socios-table th,
+.socios-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.socios-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.socios-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botón para añadir nuevo usuario */
+.add-user-container {
+    margin: 20px 0;
+}
+
+.btn-new-user {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-new-user:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los iconos de acción */
+.btn-icon {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.btn-icon:hover {
+    color: #0056b3;
+}
+
+/* Mensaje de tabla vacía */
+.socios-table td[colspan="3"] {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-search {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #45a049;
+}

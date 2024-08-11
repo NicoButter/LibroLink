@@ -1,0 +1,26 @@
+{% extends 'core/home.html' %}
+
+{% load  static %}
+
+{% block title %}Alta de Socio{% endblock %}
+
+{% block section_name %}Alta de Socio{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'accounts/css/nuevo_usuario_styles.css' %}">
+
+    <h1>Alta de Socio</h1>
+    
+    <div class="form-container">
+        <h2>Registro de Nuevo Socio</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <!-- Botón para Volver al Dashboard -->
+    <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
+
+{% endblock %}

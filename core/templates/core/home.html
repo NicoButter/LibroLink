@@ -6,7 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LibroLink</title>
+    <title>{% block title %}LibroLink{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'core/css/home_styles.css' %}">
 </head>
@@ -16,18 +20,20 @@
         <div class="core_container">
             <div class="core_header_content">
                 <div class="core_logo">
-                    <h1>LibroLink</h1>
+                    <img src="{% static 'accounts/images/librolink_logo_2.png' %}" alt="Logo">
+                    {% comment %} <h1>LibroLink</h1> {% endcomment %}
                 </div>
-                <nav class="core_app_links">
-                    <ul>
-                        <li><a href="{% url 'book_list' %}">Búsqueda de Libros</a></li>
-                        <li><a href="{% url 'add_book' %}">Administración de Libros</a></li>
-                    </ul>
-                </nav>
+                <div class="core_section_name">
+                    <h2>{% block section_name %}Biblioteca{% endblock %}</h2>
+                </div>
                 <div class="core_user_info">
                     {% if user.is_authenticated %}
                         <span>Bienvenido, {{ user.username }}</span>
-                        <a href="{% url 'logout' %}">Salir</a>
+                        {% comment %} <a href="{% url 'logout' %}">Salir</a> {% endcomment %}
+                        <form action="{% url 'accounts:logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Salir</button>
+                        </form>
                     {% else %}
                         <a href="{% url 'login' %}">Iniciar sesión</a>
                     {% endif %}

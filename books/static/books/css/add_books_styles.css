@@ -1,17 +1,23 @@
 .form-container {
     max-width: 600px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo sutil para mejorar el contraste */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para un efecto de elevación */
 }
 
 h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
+    font-size: 24px; /* Tamaño de fuente más grande */
 }
 
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del formulario */
 }
 
 form p {
@@ -19,7 +25,7 @@ form p {
 }
 
 form label {
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 5px;
     color: #333;
 }
@@ -27,30 +33,48 @@ form label {
 form input,
 form select,
 form textarea {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
 }
 
 form input[type="file"] {
-    padding: 3px;
+    padding: 6px; /* Ajuste para los campos de archivo */
 }
 
 form button {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
 form button:hover {
     background-color: #555;
 }
 
+.return-btn {
+    display: block; /* Asegura que esté en su propio bloque */
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-top: 20px; /* Espacio arriba para separarlo del formulario */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.return-btn:hover {
+    background-color: #0056b3;
+}

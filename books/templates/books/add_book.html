@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% block section_name %}Añadir Libro{% endblock %}
+
 {% block content %}
 <link rel="stylesheet" href="{% static 'books/css/add_books_styles.css' %}">
 
@@ -13,4 +15,7 @@
         <button type="submit">Guardar</button>
     </form>
 </div>
+
+<!-- Botón para Volver a la Gestión de Libros -->
+<a href="{% url 'books:gestionar_libros' %}" class="return-btn">Volver a la Gestión de Libros</a>
 {% endblock %}

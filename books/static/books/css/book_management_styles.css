@@ -1,0 +1,46 @@
+.book-management {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.return-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.return-btn:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+.management-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.management-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.management-btn:hover {
+    background-color: #218838; /* Cambio de color al pasar el mouse */
+}
+
+.book-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-list li {
+    margin-bottom: 10px;
+}
