@@ -3,6 +3,9 @@ from django.contrib.auth.models import AbstractUser, Group, Permission
 import uuid
 
 class CustomUser(AbstractUser):
+
+    dni = models.CharField(max_length=20, unique=True)  # Agregar el campo DNI
+
     is_admin = models.BooleanField(default=False)
     is_bibliotecario = models.BooleanField(default=False)
     is_socio = models.BooleanField(default=False)

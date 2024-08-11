@@ -58,68 +58,6 @@
 
      <!-- Botón para Volver al Dashboard -->
      <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
-     
+
 {% endblock %}
 
-
-
-
-
-
-
-
-
-{% comment %} {% extends 'core/home.html' %}
-
-{% load static %}
-
-{% block title %}Gestionar Socios{% endblock %}
-
-{% block section_name %}Gestión de Socios{% endblock %}
-
-{% block content %}
-
-<link rel="stylesheet" href="{% static 'accounts/css/gestionar_socios_styles.css' %}">
-
-
-    <h1>Gestionar Socios</h1>
-
-    <!-- Botón para añadir nuevo socio -->
-    <div class="add-user-container">
-        <a href="{% url 'accounts:alta_socio' %}" class="btn-new-user">Nuevo Usuario</a>
-    </div>
-
-    <!-- Tabla de socios -->
-    <table class="socios-table">
-        <thead>
-            <tr>
-                <th>Nombre de Usuario</th>
-                <th>Email</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for socio in socios %}
-                <tr>
-                    <td>{{ socio.username }}</td>
-                    <td>{{ socio.email }}</td>
-                    <td>
-                        <a href="{% url 'accounts:edicion_socio' socio.id %}" class="btn-icon">
-                            🖉 <!-- Icono de lápiz para edición -->
-                        </a>
-                        <a href="{% url 'accounts:eliminar_socio' socio.id %}" class="btn-icon" onclick="return confirm('¿Estás seguro de que quieres eliminar este socio?');">
-                            🗑 <!-- Icono de papelera para eliminar -->
-                        </a>
-                    </td>
-                </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="3">No hay socios registrados.</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <!-- Botón para Volver al Dashboard -->
-    <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
-
-{% endblock %} {% endcomment %}

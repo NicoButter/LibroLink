@@ -7,6 +7,7 @@ app_name = 'accounts'
 
 urlpatterns = [
     path("", views.login_view, name='login'),
+    path('login/', views.login_view, name='login'),
     path('logout/', custom_logout, name = 'logout'),
     path('alta_socio/', alta_socio, name='alta_socio'),
     path('gestionar_socios/', gestionar_socios, name='gestionar_socios'),
