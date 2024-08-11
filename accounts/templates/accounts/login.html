@@ -10,7 +10,7 @@
 <body>
     <div class="header">
         <img src="{% static 'accounts/images/librolink_logo_2.png' %}" alt="Logo">
-        <button id="loginBtn">Login</button>
+        <button id="loginBtn" data-modal-open="{{ modal_open }}">Login</button>
     </div>
     <div class="container">
         <div class="news-container">
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div id="loginModal" class="modal" style="display: {% if modal_open %} block {% else %} none {% endif %};">
+    <div id="loginModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Login</h2>
@@ -66,26 +66,34 @@
     </div>
 
     <script>
-        var modal = document.getElementById("loginModal");
-        var btn = document.getElementById("loginBtn");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("loginModal");
+            var btn = document.getElementById("loginBtn");
+            var span = document.getElementsByClassName("close")[0];
+        
+            // Asegúrate de comparar con una cadena
+            if (btn.getAttribute("data-modal-open") === "True") {
+                modal.style.display = "block";
+            }
+        
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+        
+            span.onclick = function() {
                 modal.style.display = "none";
             }
-        }
+        
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
     </script>
 </body>
 </html>
+
 
 
 

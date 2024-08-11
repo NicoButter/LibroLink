@@ -21,7 +21,6 @@
             <div class="core_header_content">
                 <div class="core_logo">
                     <img src="{% static 'accounts/images/librolink_logo_2.png' %}" alt="Logo">
-                    {% comment %} <h1>LibroLink</h1> {% endcomment %}
                 </div>
                 <div class="core_section_name">
                     <h2>{% block section_name %}Biblioteca{% endblock %}</h2>
@@ -29,7 +28,6 @@
                 <div class="core_user_info">
                     {% if user.is_authenticated %}
                         <span>Bienvenido, {{ user.username }}</span>
-                        {% comment %} <a href="{% url 'logout' %}">Salir</a> {% endcomment %}
                         <form action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
                             <button type="submit">Salir</button>

@@ -13,6 +13,8 @@ from .models import CustomUser, Socio
 
 def login_view(request):
     form = CustomAuthenticationForm(request, data=request.POST or None)
+    modal_open = False
+
     if request.method == 'POST':
         if form.is_valid():
             username = form.cleaned_data.get('username')
@@ -20,12 +22,17 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect_user(user) 
+                return redirect_user(user)
             else:
                 messages.error(request, 'Nombre de usuario o contraseña incorrectos.')
+                modal_open = True
         else:
             messages.error(request, 'Nombre de usuario o contraseña incorrectos.')
-    return render(request, 'accounts/login.html', {'form': form, 'modal_open': True})
+            modal_open = True
+
+    return render(request, 'accounts/login.html', {'form': form, 'modal_open': modal_open})
+
+
 
 def custom_logout(request):
     logout(request)
