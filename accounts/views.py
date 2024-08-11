@@ -7,25 +7,25 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.core.files.base import ContentFile
 from django.db.models import Q 
-
+from django.contrib import messages
 from .forms import CustomAuthenticationForm, CustomUserCreationForm
-
 from .models import CustomUser, Socio
 
-
 def login_view(request):
+    form = CustomAuthenticationForm(request, data=request.POST or None)
     if request.method == 'POST':
-        form = CustomAuthenticationForm(request, data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            user = authenticate(request, username=username, password=password)
+            user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect_user(user)
-    else:
-        form = CustomAuthenticationForm()
-    return render(request, 'accounts/login.html', {'form': form})
+                return redirect_user(user) 
+            else:
+                messages.error(request, 'Nombre de usuario o contraseña incorrectos.')
+        else:
+            messages.error(request, 'Nombre de usuario o contraseña incorrectos.')
+    return render(request, 'accounts/login.html', {'form': form, 'modal_open': True})
 
 def custom_logout(request):
     logout(request)
