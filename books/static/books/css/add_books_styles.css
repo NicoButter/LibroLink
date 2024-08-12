@@ -1,33 +1,28 @@
 .form-container {
-    max-width: 600px;
+    max-width: 800px; /* Aumentamos el ancho máximo para acomodar dos columnas */
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f9fa; /* Fondo sutil para mejorar el contraste */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para un efecto de elevación */
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 24px; /* Tamaño de fuente más grande */
+    margin-top: 5%;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espacio entre los elementos del formulario */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Definimos dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas y los elementos */
 }
 
 form p {
     margin-bottom: 15px;
+    grid-column: span 2; /* Asegura que elementos como mensajes o notas ocupen ambas columnas */
 }
 
 form label {
     font-weight: 600;
     margin-bottom: 5px;
-    color: #333;
+    color: #495057;
 }
 
 form input,
@@ -35,46 +30,53 @@ form select,
 form textarea {
     padding: 12px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #ced4da;
     border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
 }
 
-form input[type="file"] {
-    padding: 6px; /* Ajuste para los campos de archivo */
+form input[type="file"],
+form textarea {
+    grid-column: span 2; /* Los campos de tipo file y textarea ocupan ambas columnas */
 }
 
 form button {
-    padding: 12px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
+    grid-column: span 2; /* El botón de enviar ocupará ambas columnas */
+    padding: 14px;
+    font-size: 18px;
+    background-color: #343a40;
+    color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease; /* Transición suave */
+    margin-top: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #495057;
+    transform: scale(1.02);
 }
 
 .return-btn {
-    display: block; /* Asegura que esté en su propio bloque */
+    display: block;
     width: 100%;
     text-align: center;
-    padding: 12px 24px;
+    padding: 14px 28px;
     background-color: #007bff;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 500;
-    margin-top: 20px; /* Espacio arriba para separarlo del formulario */
-    transition: background-color 0.3s ease; /* Transición suave */
+    font-weight: 600;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .return-btn:hover {
     background-color: #0056b3;
+    transform: scale(1.02);
 }

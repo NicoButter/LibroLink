@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block section_name %}Añadir Libro{% endblock %}
+{% block section_name %}Biblioteca - Añadir Libro{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'books/css/add_books_styles.css' %}">
@@ -11,11 +11,47 @@
     <h2>Añadir Libro</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        
+        <div>
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+
+        <div>
+            <label for="author">Autor:</label>
+            <input type="text" id="author" name="author" required>
+        </div>
+
+        <div>
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" name="isbn" required>
+        </div>
+
+        <div>
+            <label for="publisher">Editorial:</label>
+            <input type="text" id="publisher" name="publisher">
+        </div>
+
+        <div>
+            <label for="year">Año de Publicación:</label>
+            <input type="text" id="year" name="year">
+        </div>
+
+        <div>
+            <label for="cover">Portada:</label>
+            <input type="file" id="cover" name="cover">
+        </div>
+
+        <div style="grid-column: span 2;">
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+
         <button type="submit">Guardar</button>
+        <!-- Botón para Volver al Dashboard -->
+        <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
     </form>
 </div>
 
-<!-- Botón para Volver a la Gestión de Libros -->
-<a href="{% url 'books:gestionar_libros' %}" class="return-btn">Volver a la Gestión de Libros</a>
+
 {% endblock %}

@@ -3,44 +3,51 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    background-color: #f8f9fa; /* Fondo claro y neutral */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-.return-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+.book-management h1 {
+    font-size: 24px;
+    color: #343a40; /* Color de texto más oscuro para un toque serio */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.return-btn, .management-btn {
+    padding: 12px 24px;
+    background-color: #343a40; /* Color de fondo oscuro para un estilo elegante */
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
     display: inline-block;
+    font-size: 16px;
+    font-weight: 500; /* Texto ligeramente más grueso para mayor impacto */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
 }
 
-.return-btn:hover {
-    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+.return-btn:hover, .management-btn:hover {
+    background-color: #495057; /* Cambio de color más suave en hover */
+    transform: scale(1.05); /* Ligera escala al pasar el mouse para realce */
 }
 
 .management-buttons {
     display: flex;
-    gap: 10px;
-}
-
-.management-btn {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.management-btn:hover {
-    background-color: #218838; /* Cambio de color al pasar el mouse */
+    gap: 15px;
+    justify-content: center; /* Centramos los botones para un look más balanceado */
 }
 
 .book-list ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 .book-list li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra ligera para los elementos */
 }
