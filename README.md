@@ -1,6 +1,6 @@
 # LibroLink
 
-LibroLink es un sistema de gestión de bibliotecas desarrollado con Django. Permite la búsqueda y administración de libros a través de una interfaz web intuitiva y fácil de usar.
+LibroLink es un sistema de gestión de bibliotecas desarrollado con Django. Permite la búsqueda y administración de libros y socios a través de una interfaz web intuitiva y fácil de usar.
 
 ## Características
 
