@@ -11,14 +11,14 @@ body {
 }
 
 .core_container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 .core_header {
-    background-color: #333;
+    background-color: #1f232f;
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -32,10 +32,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 20px;
 }
 
-.core_header .core_logo img {
-    height: 40px;
+.core_header .core_logo video {
+    height: 140px;
 }
 
 .core_header .core_section_name h2 {
