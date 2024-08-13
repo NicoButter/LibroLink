@@ -1,36 +1,37 @@
-/* Estilos generales para el dashboard */
 .dashboard-content {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 20px;
+    gap: 20px;
+    padding: 50px 0;
 }
 
-.dashboard-content h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Estilo para los botones */
 .dashboard-content .btn {
-    display: block;
-    width: 200px;
-    padding: 15px;
-    margin: 10px;
-    text-align: center;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
+    background-color: #1abc9c; /* Verde turquesa */
+    color: #ffffff;
     font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500; /* Peso medio */
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .dashboard-content .btn:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #16a085; 
+    transform: scale(1.05); 
 }
 
-/* Opcional: Puedes agregar más estilos específicos aquí */
+.dashboard-content .btn:active {
+    transform: scale(0.98); 
+}
+
+h1 {
+    font-size: 36px;
+    color: #2c3e50; 
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700; 
+}

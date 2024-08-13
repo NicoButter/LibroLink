@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="{% static 'accounts/css/gestionar_socios_styles.css' %}">
 
-    <h1>Gestionar Socios</h1>
+    {% comment %} <h1>Gestionar Socios</h1> {% endcomment %}
 
     <!-- Formulario de búsqueda -->
     <div class="search-container">
@@ -41,10 +41,10 @@
                     <td>{{ socio.user.email }}</td>
                     <td>
                         <a href="{% url 'accounts:edicion_socio' socio.user.id %}" class="btn-icon">
-                            🖉 <!-- Icono de lápiz para edición -->
+                            🖉
                         </a>
                         <a href="{% url 'accounts:eliminar_socio' socio.user.id %}" class="btn-icon" onclick="return confirm('¿Estás seguro de que quieres eliminar este socio?');">
-                            🗑 <!-- Icono de papelera para eliminar -->
+                            🗑
                         </a>
                     </td>
                 </tr>
@@ -56,8 +56,7 @@
         </tbody>
     </table>
 
-     <!-- Botón para Volver al Dashboard -->
-     <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
+    <!-- Botón para Volver al Dashboard -->
+    <a href="{% url 'core:bibliotecario_dashboard' %}" class="return-btn">Volver al Dashboard</a>
 
 {% endblock %}
-

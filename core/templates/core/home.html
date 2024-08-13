@@ -20,11 +20,11 @@
         <div class="core_container">
             <div class="core_header_content">
                 <div class="core_logo">
-                    <video autoplay loop muted>
+                    {% comment %} <video autoplay loop muted>
                         <source src="{% static 'core/videos/librolink_video.mp4' %}" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>
-                    {% comment %} <img src="{% static 'accounts/images/librolink_logo_2.png' %}" alt="Logo"> {% endcomment %}
+                    </video> {% endcomment %}
+                    <img src="{% static 'accounts/images/librolink_logo_2.png' %}" alt="Logo">
                 </div>
                 <div class="core_section_name">
                     <h2>{% block section_name %}Biblioteca{% endblock %}</h2>

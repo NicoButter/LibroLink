@@ -8,7 +8,6 @@
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'core/css/biblioteca_dashboard_styles.css' %}">
-    <h1>Bienvenido al Dashboard del Bibliotecario</h1>
     <div class="dashboard-content">
         <a href="{% url 'books:gestionar_libros' %}" class="btn">Administrar Libros</a>
         <a href="{% url 'accounts:gestionar_socios' %}" class="btn">Administrar Socios</a>
