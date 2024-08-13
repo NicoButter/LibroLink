@@ -20,11 +20,11 @@ body {
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* background: rgbakk(255, 255, 255, 0.8); */
+    /* background: rgba(255, 255, 255, 0.8); */
 }
 
 .header img {
-    height: 110px;
+    height: 80px;
 }
 
 .header button {
@@ -34,8 +34,12 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 20px;
     font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+    background-color: #0056b3;
 }
 
 .container {
@@ -43,7 +47,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 70px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -108,10 +111,55 @@ body {
     width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     animation: modalopen 0.3s;
 }
+
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #007BFF;
+}
+
+.floating-label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 14px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-container input:focus + .floating-label,
+.input-container input:not(:placeholder-shown) + .floating-label {
+    top: -8px;
+    left: 8px;
+    font-size: 12px;
+    color: #007BFF;
+}
+
+.input-container input:not(:placeholder-shown) {
+    background: #fff;
+}
+
+/***************************************************************************************************************/
 
 @keyframes modalopen {
     from {opacity: 0; transform: translateY(-50px);}
