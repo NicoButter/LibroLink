@@ -18,9 +18,9 @@ body {
 }
 
 .core_header {
-    background-color: #2c3e50; /* Azul marino oscuro */
+    background-color: #2c3e50;
     padding: 20px 0;
-    color: #ecf0f1; /* Color claro para el texto */
+    color: #ecf0f1;
 }
 
 .core_header_content {
@@ -34,7 +34,7 @@ body {
 }
 
 .core_section_name h2 {
-    font-weight: 600; /* Peso medio de Raleway */
+    font-weight: 600;
     font-size: 24px;
     margin: 0;
     color: #ecf0f1;
@@ -57,7 +57,7 @@ body {
 }
 
 .core_main_content {
-    margin-top: 80px; /* Ajuste para el header fijo */
+    margin-top: 80px;
     padding: 20px;
     flex: 1;
 }
@@ -68,24 +68,26 @@ body {
 }
 
 .core_user_info span {
-    font-weight: 300; /* Peso ligero de Raleway */
+    font-weight: 300;
     margin-right: 15px;
 }
 
-.core_user_info form button, .core_user_info a {
-    background-color: #34495e; /* Azul más claro */
+.core_user_info form button,
+.core_user_info a {
+    background-color: #34495e;
     color: #ecf0f1;
     border: none;
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: 400; /* Raleway regular */
+    font-weight: 400;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
-.core_user_info form button:hover, .core_user_info a:hover {
-    background-color: #1abc9c; /* Verde turquesa */
+.core_user_info form button:hover,
+.core_user_info a:hover {
+    background-color: #1abc9c;
 }
 
 .core_main_content p {

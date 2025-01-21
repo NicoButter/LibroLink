@@ -1,4 +1,3 @@
-/* Estilos generales para la gestión de libros */
 .book-management {
     text-align: center;
     padding: 40px 20px;
@@ -6,9 +5,9 @@
 
 .book-management h1 {
     font-size: 36px;
-    color: #2c3e50; /* Azul marino oscuro */
+    color: #2c3e50;
     margin-bottom: 30px;
-    font-weight: 700; /* Peso alto */
+    font-weight: 700;
 }
 
 .management-buttons {
@@ -19,7 +18,7 @@
 }
 
 .management-btn {
-    background-color: #3498db; /* Azul claro */
+    background-color: #3498db;
     color: #ffffff;
     font-size: 18px;
     padding: 15px 25px;
@@ -30,16 +29,16 @@
 }
 
 .management-btn:hover {
-    background-color: #2980b9; /* Azul más oscuro */
-    transform: scale(1.05); /* Efecto de agrandamiento */
+    background-color: #2980b9;
+    transform: scale(1.05);
 }
 
 .management-btn:active {
-    transform: scale(0.98); /* Efecto de compresión */
+    transform: scale(0.98);
 }
 
 .return-btn {
-    background-color: #e74c3c; /* Rojo suave */
+    background-color: #e74c3c;
     color: #ffffff;
     font-size: 16px;
     padding: 12px 20px;
@@ -52,10 +51,10 @@
 }
 
 .return-btn:hover {
-    background-color: #c0392b; /* Rojo más oscuro */
-    transform: scale(1.05); /* Efecto de agrandamiento */
+    background-color: #c0392b;
+    transform: scale(1.05);
 }
 
 .return-btn:active {
-    transform: scale(0.98); /* Efecto de compresión */
+    transform: scale(0.98);
 }

@@ -7,10 +7,10 @@
 }
 
 .dashboard-content .btn {
-    background-color: #1abc9c; /* Verde turquesa */
+    background-color: #1abc9c;
     color: #ffffff;
     font-size: 18px;
-    font-weight: 500; /* Peso medio */
+    font-weight: 500;
     padding: 15px 25px;
     border: none;
     border-radius: 8px;
@@ -20,18 +20,18 @@
 }
 
 .dashboard-content .btn:hover {
-    background-color: #16a085; 
-    transform: scale(1.05); 
+    background-color: #16a085;
+    transform: scale(1.05);
 }
 
 .dashboard-content .btn:active {
-    transform: scale(0.98); 
+    transform: scale(0.98);
 }
 
 h1 {
     font-size: 36px;
-    color: #2c3e50; 
+    color: #2c3e50;
     text-align: center;
     margin-bottom: 40px;
-    font-weight: 700; 
+    font-weight: 700;
 }

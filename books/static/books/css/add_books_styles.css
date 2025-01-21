@@ -1,5 +1,5 @@
 .form-container {
-    max-width: 800px; /* Aumentamos el ancho máximo para acomodar dos columnas */
+    max-width: 800px;
     margin: 0 auto;
     margin-top: 5%;
     padding: 25px;
@@ -10,13 +10,13 @@
 
 form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Definimos dos columnas de igual tamaño */
-    gap: 20px; /* Espacio entre las columnas y los elementos */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 form p {
     margin-bottom: 15px;
-    grid-column: span 2; /* Asegura que elementos como mensajes o notas ocupen ambas columnas */
+    grid-column: span 2;
 }
 
 form label {
@@ -40,11 +40,11 @@ form textarea {
 
 form input[type="file"],
 form textarea {
-    grid-column: span 2; /* Los campos de tipo file y textarea ocupan ambas columnas */
+    grid-column: span 2;
 }
 
 form button {
-    grid-column: span 2; /* El botón de enviar ocupará ambas columnas */
+    grid-column: span 2;
     padding: 14px;
     font-size: 18px;
     background-color: #343a40;
